@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!--Import materialize.css-->
+	<link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+	<link type="text/css" rel="stylesheet" href="css/style.css"/>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+	<!--Let browser know website is optimized for mobile-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col s12">
+				<h1>Math Quiz</h1>
+			</div>
+			<div class="col s12">
+				<p>Welcome! See how well you know your maths.</p>
+			</div>
+			<div class="col s12">
+				<p id="time">Time Left: -:--</p>
+			</div>
+			
+			<div class="col s12">
+				<p id="math-question">
+					Loading...
+				</p>
+			</div>
+
+			
+				<form class="col s12">
+				  <div class="row">
+					<div class="input-field col s6">
+					  <i class="material-icons prefix">mode_edit</i>
+					  <textarea id="answer-textarea" class="materialize-textarea"></textarea>
+					  <label for="answer-textarea">Try answer the question as quickly as possible!</label>
+					</div>
+				  </div>
+				</form>
+
+				<div class="col s6">
+					<p id="score">
+						Score: 0
+					</p>
+				</div>
+
+		</div>
+	</div>
+
+
+
+	<!--JavaScript at end of body for optimized loading-->
+	<script type="text/javascript" src="js/myScript.js"></script>
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+	<script>
+		$(document).ready(function () { $('.fixed-action-btn').floatingActionButton();
+	</script>
+</body>
+
+</html>
