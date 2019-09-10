@@ -1,7 +1,12 @@
 #math-question {
+    display: none;
     font-size: 175%;
 }
 
 #score {
     font-size: 150%;
+}
+
+#input-area {
+    display: none;
 }

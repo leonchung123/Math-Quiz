@@ -105,7 +105,7 @@ const sleep = (milliseconds) => {
 // more code
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
-    setInterval(function () {
+    var t = setInterval(function () {
         minutes = parseInt(timer / 60, 10);
         seconds = parseInt(timer % 60, 10);
 
@@ -115,13 +115,23 @@ function startTimer(duration, display) {
         display.textContent = "Time Left: " + minutes + ":" + seconds;
 
         if (--timer < 0) {
-            timer = duration;
+            $("#input-area").fadeToggle();
+            $("#math-question").fadeToggle();
+            $("#start-button").toggle();
+            $("#button-icon").fadeToggle();
+            clearInterval(t);
+            document.getElementById("start-button").innerHTML = `<i id="button-icon" class="material-icons left">play_circle_outline</i>Replay`;
         }
     }, 1000);
 }
 
-window.onload = function () {
+function displayTimer () {
+    score = 0;
+    document.getElementById("score").innerHTML = "Score: " + score;
     var sixtySeconds = 60,
         display = document.querySelector('#time');
+    $("#math-question").toggle();
+    $("#input-area").toggle();
+    $("#start-button").fadeToggle();
     startTimer(sixtySeconds, display);
 };
